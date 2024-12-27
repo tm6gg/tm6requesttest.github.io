@@ -1,0 +1,45 @@
+<!--include("_header.html")-->
+<!--include("_AZlist.html")-->
+
+<br>
+
+<table border="0" width="98%" cellspacing="0" cellpadding="4">
+  <tr bgcolor="#002E5B"> 
+    <td colspan="7" nowrap align="left"> 
+      <b><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF">Playlist</font></b>
+    </td>
+  </tr>	
+
+<!--songlist.mode=split-->
+<!--LOOP(songlist)-->
+<!--LOOP_ROW-->  
+ <tr bgcolor="$darkrow$"> 
+    <td nowrap align="right" width="1%"><font size="2" color="#003366"><small>$songlist.no$</small></font></td>
+    <td nowrap><font size="2" color="#003366">&nbsp;<small>$songlist.combine$</small></font></td>
+	
+	<td nowrap width="1%"> 
+      <p align="center"><font size="2" color="#003366"><a href="javascript:request($songlist.songID$,'$samhost$','$samport$')"><img
+    src="images/request.gif" alt="Request this song now!" border="0"></a></font> 
+    </td>
+	
+    <td nowrap width="1%"> 
+      <p align="center"><font size="2" color="#003366"><a href="$songlist.buycd$" target="_blank"><img
+    src="images/buy.gif" alt="Buy this CD now!" border="0"></a></font> 
+    </td>
+    <td nowrap width="1%"> 
+      <p align="center"><font size="2" color="#003366"><a href="$songlist.website$" target="_blank"><img
+    src="images/home.gif" alt="Artist homepage" border="0"></a></font> 
+    </td>
+	
+    <td nowrap><font color="#003366" size="2"><small>$songlist.album$</small></font></td>
+    <td nowrap> 
+      <p align="right"><font color="#003366" size="2"><small><strong>$songlist.mmss$</strong></small></font>
+    </td>
+  </tr>
+<!--LOOP_END-->  
+</table>
+
+<br>
+
+<!--include("_AZlist.html")-->
+<!--include("_footer.html")-->

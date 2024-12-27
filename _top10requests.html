@@ -1,0 +1,29 @@
+<!--requests.LIMIT=10--> 
+<!--requests.SQL="SELECT songlist.ID, songlist.count_requested, songlist.artist, songlist.title, songlist.album, songlist.buycd, songlist.date_played,
+                         count(*) as cnt 
+                        FROM requestlist, songlist 
+			WHERE   (requestlist.songID = songlist.ID) AND
+			        (requestlist.code<700) 
+			GROUP BY songlist.ID, songlist.count_requested, songlist.artist, songlist.title, songlist.album, songlist.buycd, songlist.date_played
+			ORDER BY songlist.count_requested DESC, songlist.date_played DESC"--> 
+
+
+<!--LOOP(requests)-->
+<!--LOOP_HEADER-->
+<table width="100%" bgcolor="$lightrow$" border="0" cellspacing="0" cellpadding="5">
+<tr bgcolor="$darkrow$"><td nowrap><b><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#555555">Top10 Requests</font></b></td></tr> 
+<tr><td nowrap>
+<!--LOOP_ROW-->
+<font size="2" color="#003366"><small>$requests.no$.
+     <a href="$requests.buycd$" target="_blank">$requests.artist$</a></small></font> <font size="2" color="#9F9F9F"><small>($requests.cnt$)</small></font><br>
+	 <font size="2" color="#003366"><small>&nbsp;&nbsp;&nbsp;&nbsp;$requests.title$</small></font><br>
+<!--LOOP_FOOTER-->
+</td></tr>
+</table>
+<!--LOOP_END-->
+ 
+
+
+
+	 
+

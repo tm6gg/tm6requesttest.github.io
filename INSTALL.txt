@@ -1,0 +1,51 @@
+SAM HTML output web template
+############################
+
+STEP1
+=====
+
+Open up SAM Broadcaster
+
+SAM->Config->HTML output
+
+Specify the following input / output files:
+
+<full path here>\_playing.html <full path here>\playing.html
+<full path here>\_songinfo.html <full path here>\songinfo.html
+
+And for the Playlist section:
+<full path here>\_playlist.html <full path here>\playlist.html
+
+Step2
+=====
+
+Set up your FTP details if website should be automatically be uploaded to a webserver...
+
+STEP3
+=====
+
+ Edit the _config.html file to your needs.
+
+Step4
+=====
+
+Under the SAM Broadcaster menu: 
+ SAM->General->HTML output->Generate playlist
+
+This will generate the playlist since the playlist needs to be manaully generated...
+
+Step5
+=====
+
+Upload all files to your web directory (Including all album pictures for your tracks)
+
+#########
+
+Your website should now be fully functional & automatically update each time the song changes.
+(PS: Make sure you checked the "Auto-generate on song change" checkbox)
+
+
+
+
+
+

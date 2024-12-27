@@ -1,0 +1,4 @@
+song: $song.title$
+artist: $song.artist$
+CD_name: $song.album$
+ecommerceID: $song.buycd$

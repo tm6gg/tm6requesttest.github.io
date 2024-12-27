@@ -1,0 +1,57 @@
+<!--include("_header.html")-->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!---
+ var refreshID = "";
+ refreshID = setTimeout("DoRefresh()", $timeout$);
+ 
+function DoRefresh()
+{
+  var buster = Math.random();
+  document.location.href = 'playing.html?buster='+buster;
+}
+//--->
+</SCRIPT>
+
+<em>$Viewers$ Oyentes al Presente - Currently $Viewers$ Listeners!</em><br>
+<br>
+<table width="419" height="174" border="0" align="left" cellpadding="4" cellspacing="0" bgcolor="#FFCCFF">
+  <tr bgcolor="#390049">
+    <td width="50%" colspan="1" align="left" nowrap bgcolor="#FF33FF"><p><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF"><b>Tocando Ahora</b></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF"><b>- Currently Playing</b></font> </p>
+    </td>
+    <td align="center" nowrap bgcolor="#FF33FF">&nbsp;</td>
+    <td align="left" nowrap bgcolor="#FF33FF"><p>&nbsp;</p></td>
+    <td width="50%" align="left" nowrap bgcolor="#FF33FF"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FFFFFF"><b>Album</b></font></td>
+  </tr>
+  <tr bgcolor="$darkrow$">
+    <td bgcolor="#FFCCFF"><font size="2" color="#390049"><small>$song.combine$</small></font></td>
+    <td width="2%" nowrap bgcolor="#FFCCFF">&nbsp;</td>
+    <td width="4%" align="center" nowrap bgcolor="#FFCCFF"><font size="2" color="#390049"><a href="javascript:songinfo($song.songID$)"></a></font> </td>
+    <td bgcolor="#FFCCFF"><font color="#390049" size="2"><small>$song.album$</small></font></td>
+  </tr>
+  <!--LOOP(queue,2)-->
+  <!--LOOP_HEADER-->
+  <tr bgcolor="$lightrow$">
+    <td colspan="5"><b><font size="2" color="#777777">Pr&oacute;ximos - Coming up:</font></b> <font size="2" color="390049"><b>
+      <!--LOOP_ROW-->
+      $queue.artist$&nbsp;
+      <!--LOOP_FOOTER-->
+    </b></font></td>
+  </tr>
+  <!--LOOP_END-->
+  <tr bgcolor="#390049">
+    <td colspan="5" nowrap bgcolor="#FF33FF"><p align="left"><b><font size="1" face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF">Recently 
+      played songs</font></b> </p></td>
+  </tr>
+  <!--LOOP(history,1,5)-->
+  <!--LOOP_ROW-->
+  <tr bgcolor="$darkrow$">
+    <td height="40" bgcolor="#FFCCFF"><font size="2" color="#390049"><small>$history.combine$</small></font></td>
+    <td width="2%" nowrap bgcolor="#FFCCFF">&nbsp;</td>
+    <td width="14%" nowrap bgcolor="#FFCCFF"><p align="center"><font size="2" color="#390049"><a href="$history.buycd$" target="_blank"><img
+    src="images/buy.gif" alt="Buy this CD now!" border="0" /></a></font> </p></td>
+    <td width="4%" align="center" nowrap bgcolor="#FFCCFF"></td>
+    <td nowrap bgcolor="#FFCCFF"><font color="#390049" size="2"><small>$history.album$</small></font></td>
+  </tr>
+  <!--LOOP_END-->
+</table>
